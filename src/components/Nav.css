@@ -1,10 +1,12 @@
 .tg-nav {
   display: flex;
-  a {
-    display: inline-block;
-  }
-  a + a {
-    margin-left: 1em;
-    color: #fff;
-  }
+}
+
+.tg-nav a {
+  display: inline-block;
+  color: #fff;
+}
+
+.tg-nav a + a {
+  margin-left: 1em;
 }
