@@ -1,5 +1,15 @@
-.tg-content {
+.tg-content-container {
+  display: flex;
   width: calc(100vw - 2em);
   height: 100vh;
   padding: 1em;
+}
+
+.tg-content-container .content {
+  width: 66%;
+}
+
+.tg-content-container .sidebar {
+  width: 34%;
+  background: #ccc;
 }
