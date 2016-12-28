@@ -1,5 +1,6 @@
 .tg-nav {
   display: flex;
+  align-items: center;
 }
 
 .tg-nav a {

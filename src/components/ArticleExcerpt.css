@@ -1,0 +1,26 @@
+.article-excerpt {
+  padding-bottom: 1em;
+  border-bottom: 1px solid #dedede;
+  margin-bottom: 1em;
+}
+
+.article-excerpt:last-child {
+  margin-bottom: 0;
+}
+
+.article-excerpt h3 {
+  margin: 0;
+  line-height: 1;
+}
+
+.article-excerpt datetime {
+  font-size: .75em;
+}
+
+/*.articcle-excerpt p {
+  margin-top: 0;
+}*/
+
+.article-excerpt .tags {
+  display: block;
+}

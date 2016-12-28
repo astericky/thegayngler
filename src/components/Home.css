@@ -1,15 +1,17 @@
 .tg-content-container {
   display: flex;
-  width: calc(100vw - 2em);
+  width: calc(100vw);
   height: 100vh;
-  padding: 1em;
+  padding: 0;
+  font-family: helvetica, arial, sans-serif;
 }
 
 .tg-content-container .content {
-  width: 66%;
+  width: calc(100% - 340px);
+  padding: 1em;
 }
 
 .tg-content-container .sidebar {
-  width: 34%;
+  width: 340px;
   background: #ccc;
 }
