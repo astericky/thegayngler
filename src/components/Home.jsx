@@ -3,6 +3,31 @@ import React, { PropTypes } from 'react'
 import styles from './Home.css'
 import ArticleExcerpt from './ArticleExcerpt.jsx'
 
+function renderFeaturedArticles(articles = [
+  {
+    title: "Fake Title",
+    date: "Jan 1, 2017",
+    tags: "stuff, stuff, stuff, stuff",
+    post: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
+  },
+  {
+    title: "Fake Title",
+    date: "Jan 1, 2017",
+    tags: "stuff, stuff, stuff, stuff",
+    post: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
+  },
+  {
+    title: "Fake Title",
+    date: "Jan 1, 2017",
+    tags: "stuff, stuff, stuff, stuff",
+    post: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
+  },
+]) {
+  return articles.map((article, index) => (
+    <ArticleExcerpt key={index} {...article} />
+  ))
+}
+
 function renderArticles(articles = [
   {
     title: "Fake Title",
@@ -35,8 +60,8 @@ class Content extends React.Component {
     return (
       <main className={styles["tg-content-container"]}>
         <section className={styles["content"]}>
-          <article className={styles["featured-article"]}></article>
-          {renderArticles()}
+          <div className={styles["featured-articles"]}>{renderFeaturedArticles()}</div>
+          <div className={styles["articles"]}>{renderArticles()}</div>
         </section>
         <aside className={styles["sidebar"]}></aside>
       </main>

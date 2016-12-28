@@ -1,17 +1,25 @@
 .tg-content-container {
   display: flex;
   width: calc(100vw);
-  height: 100vh;
+  min-height: 100vh;
   padding: 0;
   font-family: helvetica, arial, sans-serif;
 }
 
 .tg-content-container .content {
   width: calc(100% - 340px);
-  padding: 1em;
 }
 
 .tg-content-container .sidebar {
   width: 340px;
-  background: #ccc;
+  background: #eee;
 }
+
+.tg-content-container .featured-articles,
+.tg-content-container .articles {
+  padding: 1em;
+}
+
+/*.tg-content-container .featured-articles {
+  background: rgba(4, 139, 168, .1);
+}*/
