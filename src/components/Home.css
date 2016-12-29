@@ -20,6 +20,9 @@
   padding: 1em;
 }
 
+.tg-content-container .no-articles-message {
+  text-align: center;
+}
 /*.tg-content-container .featured-articles {
   background: rgba(4, 139, 168, .1);
 }*/
