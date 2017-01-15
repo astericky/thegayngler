@@ -1,67 +1,57 @@
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-// const autoprefixer = require('autoprefixer')
-// const { resolve } = require('path')
-// console.log(`PATH: ${__dirname}/src`);
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+
+const VENDOR_LIBS = [
+  'react', 'react-dom','redux', 'react-redux', 'redux-thunk', 'lodash'
+]
+
+
 module.exports = {
     context: `${__dirname}/src`,
 
     entry: {
-      index: [
-        'react-hot-loader/patch',
-        'webpack-dev-server/client?http://localhost:8080',
-        'webpack/hot/only-dev-server',
-        './index.jsx',
-      ]
+      bundle: './js/index.jsx',
+      vendor: VENDOR_LIBS
     },
 
     output: {
-      filename: '[name].bundle.js',
       path: `${__dirname}/public`,
-      publicPath: '/',
+      filename: '[name].[chunkhash].js',
     },
 
     devtool: 'inline-source-map',
 
-    devServer: {
-      hot: true,
-      contentBase: `${__dirname}/src`,
-      publicPath: '/',
-    },
+    // devServer: {
+    //   hot: true,
+    //   contentBase: `${__dirname}/src/`,
+    //   publicPath: '/',
+    // },
 
     module: {
       rules: [
         {
+          use: ['babel-loader'],
           test: /\.jsx?$/,
-          loaders: ['babel-loader',],
-          include: [
-            `${__dirname}/src`,
-            `${__dirname}/node_modules/preact-compat`,
-          ],
           exclude: /node_modules/,
         },
         {
+          loader: ExtractTextPlugin.extract({
+            loader: 'css-loader'
+          }),
           test: /\.css$/,
-          loaders: [
-            'style-loader',
-            'css-loader?modules&importLoaders=1',
-            'postcss-loader',
-          ],
         },
       ]
     },
 
     plugins: [
-      // new webpack.optimize.CommonsChunkPlugin({
-      //   name: "commons",
-      //   filename: "commons.js",
-      //   minChunks: 2,
-      // }),
-      new webpack.NamedModulesPlugin(),
-      new webpack.HotModuleReplacementPlugin(),
+      // new webpack.HotModuleReplacementPlugin(),
+      new webpack.optimize.CommonsChunkPlugin({
+        names: ['vendor', 'manifest']
+      }),
+      new ExtractTextPlugin('style.css'),
       new HtmlWebpackPlugin({
-        filename: 'index.html',
-        template: 'index.html'
+        template: './index.html'
       }),
     ]
 }
