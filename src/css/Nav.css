@@ -1,0 +1,18 @@
+.tg-nav {
+  display: flex;
+  align-items: center;
+}
+
+.tg-nav a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+}
+
+.tg-nav a:hover {
+  text-decoration: underline;
+}
+
+.tg-nav a + a {
+  margin-left: 1em;
+}
