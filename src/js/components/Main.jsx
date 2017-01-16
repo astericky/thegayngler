@@ -5,7 +5,7 @@ import Header from './Header.jsx'
 import Footer from './Footer.jsx'
 
 const Main = (props) => (
-  <div className={styles.main}>
+  <div>
     <Header />
     {props.children}
     <Footer />

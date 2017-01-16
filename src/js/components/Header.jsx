@@ -4,7 +4,7 @@ import styles from '../../css/Header.css'
 import Nav from './Nav.jsx'
 
 const Header = (props) => (
-  <header className={styles["tg-header"]}>
+  <header className="tg-header">
     <h1>TheGayngle</h1>
     <Nav />
   </header>

@@ -7,7 +7,7 @@ const ArticleExcerpt = (props) => {
   let postText = post.split('\n').map((p, index) => <p key={index}>{p.trim()}</p>)
 
   return (
-    <article className={styles['article-excerpt']}>
+    <article className="article-excerpt">
       <header>
         <h3>{title}</h3>
         <datetime>{date}</datetime>

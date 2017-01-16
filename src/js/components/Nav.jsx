@@ -4,7 +4,7 @@ import { Link } from 'react-router'
 import styles from '../../css/Nav.css'
 
 const Nav = (props) => (
-    <nav className={styles["tg-nav"]}>
+    <nav className="tg-nav">
       <Link to='/about'>About</Link>
       <Link to='/contact-me'>Contact Me</Link>
     </nav>

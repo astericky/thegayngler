@@ -3998,9 +3998,9 @@ webpack-sources@^0.1.4:
     source-list-map "~0.1.7"
     source-map "~0.5.3"
 
-webpack@^2.2.0-rc.1:
-  version "2.2.0-rc.5"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-2.2.0-rc.5.tgz#ab471ea69b4e21d2dd5f1ba868dbcc4483aac3a0"
+webpack@^2.2.0-rc.5:
+  version "2.2.0-rc.6"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-2.2.0-rc.6.tgz#aa503ba64802143ff067920e4a376c83005ee3fe"
   dependencies:
     acorn "^4.0.4"
     acorn-dynamic-import "^2.0.0"

@@ -6,8 +6,9 @@
   "license": "MIT",
   "scripts": {
     "clean": "rimraf public",
-    "start": "webpack-dev-server",
-    "build": "NODE_ENV=production npm run clean && webpack -p"
+    "build": "NODE_ENV=production npm run clean && webpack -p",
+    "serve": "webpack-dev-server",
+    "gh-pages-deploy": "npm run build && git subtree push --prefix dist origin gh-pages"
   },
   "devDependencies": {
     "babel": "^6.5.2",
@@ -23,7 +24,7 @@
     "react-hot-loader": "^3.0.0-beta.6",
     "rimraf": "^2.5.4",
     "style-loader": "^0.13.1",
-    "webpack": "^2.2.0-rc.1",
+    "webpack": "^2.2.0-rc.5",
     "webpack-dev-server": "^2.2.0-rc.0"
   },
   "dependencies": {

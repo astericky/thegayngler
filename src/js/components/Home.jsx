@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
 
-import styles from '../../css/Home.css'
+import '../../css/Home.css'
 import ArticleExcerpt from './ArticleExcerpt.jsx'
 
 const mapStateToProps = state => ({ posts: state.posts })
@@ -30,12 +30,12 @@ class Home extends React.Component {
     const featuredPosts = posts.filter(post => post.type === 'featured')
     const standardPosts = posts.filter(post => post.type === 'standard')
     return (
-      <main className={styles["tg-content-container"]}>
-        <section className={styles["content"]}>
-          <div className={styles["featured-articles"]}>{renderFeatured(featuredPosts)}</div>
-          <div className={styles["articles"]}>{renderStandard(standardPosts)}</div>
+      <main className="tg-content-container">
+        <section className="content">
+          <div className="featured-articles">{renderFeatured(featuredPosts)}</div>
+          <div className="articles">{renderStandard(standardPosts)}</div>
         </section>
-        <aside className={styles["sidebar"]}></aside>
+        <aside className="sidebar"></aside>
       </main>
     )
   }

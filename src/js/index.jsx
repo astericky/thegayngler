@@ -1,10 +1,9 @@
-import 'babel-polyfill'
+// import 'babel-polyfill'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { createStore, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
 import throttle from 'lodash/throttle'
-import { AppContainer } from 'react-hot-loader'
 
 import * as actions from './actions'
 import reducers from './reducers'
@@ -63,17 +62,7 @@ const store = createStore(
 
 // store.dispatch(actions.startFetchPosts())
 
-const render = () => {
-  ReactDOM.render(
-    <AppContainer>
-      <Root store={store}/>
-    </AppContainer>,
-    document.getElementById('root')
-  )
-}
-
-render()
-
-if (module.hot) {
-  module.hot.accept('./components/Root.jsx', render)
-}
+ReactDOM.render(
+  <Root store={store}/>,
+  document.getElementById('root')
+)
