@@ -8,7 +8,7 @@
     "clean": "rimraf public",
     "build": "NODE_ENV=production npm run clean && webpack -p",
     "serve": "webpack-dev-server",
-    "gh-pages-deploy": "npm run build && git subtree push --prefix dist origin gh-pages"
+    "gh-pages-deploy": "npm run build && git subtree push --prefix public origin gh-pages"
   },
   "devDependencies": {
     "babel": "^6.5.2",
